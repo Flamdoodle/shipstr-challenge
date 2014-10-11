@@ -1,0 +1,10 @@
+<h2>Welcome!</h2>
+<p>To see the current and past values of imports/exports of a certain class, please enter the series ID of your query.  If you don't know it, please consult <%= link_to("this table", "http://download.bls.gov/pub/time.series/ei/ei.series") %> for your series ID and <%= link_to("this table", "http://download.bls.gov/pub/time.series/ei/ei.series") %> for the index codes.</p>
+
+<%= form_tag api_query_path, id: "query-form" do %>
+  <%= label_tag(:series_id, "Series ID:") %>
+  <%= text_field_tag(:series_id) %>
+  <%= submit_tag("Submit") %>
+<% end %>
+
+<div id="graph"></div>

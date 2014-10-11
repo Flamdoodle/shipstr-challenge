@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'index#home'
+  post 'api_query' => 'index#api_query'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
