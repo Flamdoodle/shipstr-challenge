@@ -7,7 +7,7 @@ class JsonFormatterForGraph
     sanitized_json = @unformatted_json["Results"]["series"][0]["data"]
     dates = date_formatter(sanitized_json)
     index_values = value_formatter(sanitized_json)
-    formatted_json = { dates: dates, values: index_values }
+    formatted_json = { dates: dates, values: index_values, seriesID: @unformatted_json["Results"]["series"][0]["seriesID"] }
   end
 
   private
