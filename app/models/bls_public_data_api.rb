@@ -4,15 +4,15 @@ class BlsPublicDataApi
     @url = 'http://api.bls.gov/publicAPI/v1/timeseries/data/'
   end
 
-  def create_client
+  def query
     api_response = RestClient.post(@url, {'seriesid' => [@series_id]}.to_json, :content_type => 'application/json')
     parsed_api_response = JSON(api_response)
+    format_api_response(parsed_api_response)
   end
 
-  # private
+  private
 
-  # def format_api_response(parsed_api_response)
-  #   parsed_api_response.each do |key, value|
-  #   end
-  # end
+  def format_api_response(parsed_api_response)
+    parsed_api_response["Results"]["series"][0]["data"]
+  end
 end

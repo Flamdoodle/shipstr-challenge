@@ -4,11 +4,10 @@ class IndexController < ApplicationController
   end
 
   def api_query
-    p params[:series_id]
-    api_query = BlsPublicDataApi.new(params[:series_id])
-    api_query_return = api_query.create_client
+    public_data = BlsPublicDataApi.new(params[:series_id])
+    api_query_return = public_data.query
     p api_query_return
-    render json: { apiReturn: api_query_return }
+    render json: api_query_return
   end
 
   # private
