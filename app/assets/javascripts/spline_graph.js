@@ -15,7 +15,7 @@ var queryFormAjax = function(formTag){
             url: '/api_query',
             data: $(this).serialize()
         }).done(function(response){
-            ajaxDone(response);
+            ajaxDone(response, buildSplineGraph);
         })
     });
 };
@@ -26,9 +26,8 @@ var ajaxDone = function(ajaxResponse, graphingFunction){
 };
 
 var buildSplineGraph = function(graphingData){
-    var value;
     $(function(){
-        $('#total_progress_graph')
+        $('#graph')
         .highcharts({
             credits: { enabled: false },
             allowPointSelect: { enabled: true },

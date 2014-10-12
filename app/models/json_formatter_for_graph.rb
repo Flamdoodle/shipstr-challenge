@@ -17,14 +17,14 @@ class JsonFormatterForGraph
     sanitized_json.each do |month_values|
       dates << (month_values["periodName"] + " " + month_values["year"])
     end
-    dates
+    dates.reverse
   end
 
   def value_formatter(sanitized_json)
     index_values = []
     sanitized_json.each do |month_values|
-      index_values << month_values["value"]
+      index_values << month_values["value"].to_f
     end
-    index_values
+    index_values.reverse
   end
 end
