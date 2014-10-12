@@ -33,7 +33,7 @@ var buildSplineGraph = function(graphingData){
             allowPointSelect: { enabled: true },
             chart: { type: 'spline' },
             title: { text: '' },
-            subtitle: { text: '3yr Price Index' },
+            subtitle: { text: 'Price Index' },
             xAxis: { categories: graphingData.dates, title: { text: null } },
             yAxis: { title: { text: 'Weighted Average' },
                     labels: { formatter: function(){return this.value + '%'} }
@@ -43,14 +43,7 @@ var buildSplineGraph = function(graphingData){
             series: [{
                 name: 'Price Index',
                 data: graphingData.values,
-                cursor: 'pointer',
-                    point: {
-                        events: {
-                            click: function (e) {
-                                x: e.pageX
-                            }
-                        }
-                    },
+                cursor: 'pointer'
             }]
         })
     })
