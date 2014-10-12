@@ -1,0 +1,13 @@
+.query-form {
+  display: inline-block;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#graph {
+  min-width: 310px;
+  height: 400px;
+  margin: 0 auto
+}
