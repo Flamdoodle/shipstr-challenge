@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 var ready = function() {
-        queryFormAjax('#query-form')
+        queryFormAjax('.query-form')
 };
 
 var queryFormAjax = function(formTag){
