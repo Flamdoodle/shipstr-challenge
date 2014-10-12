@@ -32,9 +32,9 @@ var buildGraph = function(graphingData){
             allowPointSelect: { enabled: true },
             chart: { type: 'spline' },
             title: { text: '' },
-            subtitle: { text: 'Price Index' },
+            subtitle: { text: 'Price Index By Month' },
             xAxis: { categories: graphingData.dates, title: { text: null } },
-            yAxis: { title: { text: 'Weighted Average' },
+            yAxis: { title: { text: 'Weighted Average/Price Index' },
                     labels: { formatter: function(){return this.value + '%'} }
             },
             tooltip: { crosshairs: true, shared: true },
