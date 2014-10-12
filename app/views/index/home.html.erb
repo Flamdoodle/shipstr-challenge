@@ -15,19 +15,19 @@
 
   <%= form_tag api_query_path, :class => "query-form" do %>
     <%= label_tag(:series_id, "Imports:", :class => "label") %>
-    <%= select_tag(:series_id, options_for_select([["All Commodities", "EIUIR"],["Petroleum and Petroleum Products", "EIUIR100"],["All Imports Excluding Petroleum","EIUIREXPET"],["All Imports Excluding Fuels","EIUIREXFUELS"]])) %>
+    <%= select_tag(:series_id, options_for_select([["All Commodities", "EIUIR"],["Petroleum and Petroleum Products", "EIUIR100"],["All Imports Excluding Petroleum","EIUIREXPET"],["All Imports Excluding Fuels","EIUIREXFUELS"]]), prompt: "--Select--") %>
     <%= submit_tag("Submit") %>
   <% end %>
 
   <%= form_tag api_query_path, :class => "query-form" do %>
     <%= label_tag(:series_id, "Exports:", :class => "label") %>
-    <%= select_tag(:series_id, options_for_select([["All Commodities", "EIUIQ"],["Agricultural Commodities", "EIUIQAG"],["Nonagricultural Commodities","EIUIQEXAG"]])) %>
+    <%= select_tag(:series_id, options_for_select([["All Commodities", "EIUIQ"],["Agricultural Commodities", "EIUIQAG"],["Nonagricultural Commodities","EIUIQEXAG"]]), prompt: "--Select--") %>
     <%= submit_tag("Submit") %>
   <% end %>
 
   <%= form_tag api_query_path, :class => "query-form" do %>
     <%= label_tag(:series_id, "Locality of Origin - All Commodities:", :class => "label") %>
-    <%= select_tag(:series_id, options_for_select([["Industrialized Countries", "EIUCOINDUSTOT"],["Other Countries", "EIUCOOTHERTOT"],["Canada","EIUCOCANTOT"],['European Union','EIUCOEECTOT'],['France','EIUCOFRNTOT'],['Germany','EIUCOGERTOT'],['United Kingdom','EIUCOUKTOT'],['Latin America','EIUCOLATTOT'],['Mexico','EIUCOMEXTOT'],['Pacific Rim','EIUCOPRIMTOT'],['China','EIUCOCHNTOT'],['Japan','EIUCOJPNTOT'],[' Asian Newly Industrialized Countries','EIUCOOASTOT'],['Association of Southeast Asian Nations','EIUCOASEANTOT'],['Asia Near East Countries','EIUCOASNRETOT']])) %>
+    <%= select_tag(:series_id, options_for_select([["Industrialized Countries", "EIUCOINDUSTOT"],["Other Countries", "EIUCOOTHERTOT"],["Canada","EIUCOCANTOT"],['European Union','EIUCOEECTOT'],['France','EIUCOFRNTOT'],['Germany','EIUCOGERTOT'],['United Kingdom','EIUCOUKTOT'],['Latin America','EIUCOLATTOT'],['Mexico','EIUCOMEXTOT'],['Pacific Rim','EIUCOPRIMTOT'],['China','EIUCOCHNTOT'],['Japan','EIUCOJPNTOT'],[' Asian Newly Industrialized Countries','EIUCOOASTOT'],['Association of Southeast Asian Nations','EIUCOASEANTOT'],['Asia Near East Countries','EIUCOASNRETOT']]), prompt: "--Select--") %>
     <%= submit_tag("Submit") %>
   <% end %>
 </center>
