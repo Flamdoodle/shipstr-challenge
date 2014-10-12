@@ -7,7 +7,10 @@ class IndexController < ApplicationController
     public_data = BlsPublicDataApi.new(params[:series_id])
     api_query_return = public_data.query
     p api_query_return
-    render json: api_query_return
+    json_formatter = JsonFormatterForGraph.new(api_query_return)
+    formatted_json_for_graphs = json_formatter.format
+    p formatted_json_for_graphs
+    render json: formatted_json_for_graphs
   end
 
   # private
